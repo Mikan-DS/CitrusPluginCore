@@ -23,7 +23,7 @@
 
 Объявление должно происходить в init -998 (или раньше).
 И выглядеть примерно так:
-```
+```rpy
 init -998 python in MyPlugin:
     import store
     plugin_config = {
@@ -39,7 +39,7 @@ init -998 python in MyPlugin:
 
 Инициализация должна происходить в init -997.
 
-```
+```rpy
 init -997 python in MyPlugin:
 
     try:
@@ -61,7 +61,7 @@ init -999 python in MyPlugin:
 
 Помимо этого, если в вашем плагине имеются константы которые высчитываются из других констант (которые могут быть изменены), то необходимо добавить дополнительный блок
 на init -997.
-```
+```rpy
 init -997 python in MyPlugin:
     pass # ваши настройки
 ```
@@ -74,7 +74,7 @@ init -997 python in MyPlugin:
 
 Помимо этого прописать в файле настройку для ренпая о том что в итоговый билд эти файлы вставлять не надо.
 
-```
+```rpy
 init python in MyPlugin:
     build.classify('plugins/MyPlugin/demo/*', None)
 ```
@@ -90,7 +90,7 @@ init python in MyPlugin:
 Советуем для хорошего тона писать документации `README.md` с описыванием как работает плагин, его зависимости и константы :)
 
 Для репозиториев имеется проверенный временем `.gitignore`:
-```rpy
+```
 *.rpyc
 *.rpymc
 *.0rpy
@@ -127,7 +127,7 @@ The code consists of two parts: declarations and an initializer
 The declaration should occur in init -998 (or earlier).
 And it looks something like this:
 
-```
+```rpy
 init -998 python in MyPlugin:
     import store
     plugin_config = {
@@ -145,7 +145,7 @@ At the moment, the mandatory settings are:
 
 Initialization should occur in init -997.
 
-```
+```rpy
 init -997 python in MyPlugin:
 
     try:
@@ -162,7 +162,7 @@ This part is necessary to configure the internal constants of the application, w
 
 It is recommended to use the `constants.rpy` file. The code runs at init -999 (or earlier)
 
-```
+```rpy
 init -999 python in MyPlugin:
     pass # your settings
 
@@ -171,7 +171,7 @@ init -999 python in MyPlugin:
 In addition to this, if your plugin has constants that are calculated from other constants (which can be changed), then you need to add an additional block
 at init -997.
 
-```
+```rpy
 init -997 python in MyPlugin:
     pass # your settings
 
@@ -186,7 +186,7 @@ It is recommended to use the `demo.rpy` file, in the `demo` folder.
 
 In addition to this, write in the file the setting for renpy that these files should not be inserted into the final build.
 
-```
+```rpy
 init python in MyPlugin:
     build.classify('plugins/MyPlugin/demo/*', None)
 
