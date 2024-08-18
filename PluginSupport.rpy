@@ -19,7 +19,7 @@ init -999 python in CitrusPluginSupport:
             self.order = order
 
     core_plugin_config = {
-        "version": "1.24.05.11.0",
+        "version": "1.24.08.18.0",
         "name": "CitrusPluginSupport",
         "order": -1000
     }
