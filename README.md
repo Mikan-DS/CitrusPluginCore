@@ -1,5 +1,7 @@
 # The Citrus Plugin Core
 
+## THIS VERSION IS OBSOLETE, USE CPS v2 INSTEAD
+
 # RU
 Это ядро для плагинов семейства `Citrus` сделанных под игры на движке Ren'Py.
 
